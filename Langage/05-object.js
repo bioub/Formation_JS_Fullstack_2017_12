@@ -48,7 +48,7 @@ let nb2 = nb1; // passage par valeur
 nb1 = 2;
 console.log(nb2); // 1
 
-let ob1 = { nb: 1 };
+let ob1 = { nb: 1 }; // 2 allocs : 1 pour l'objet, 1 pour la variable
 let ob2 = ob1; // passage par référence
 ob2.nb = 2;
 console.log(ob1.nb); // 2
@@ -69,6 +69,11 @@ const coords = {
   x: 10,
   y: 20,
 };
+
+for (let key in coords) {
+  console.log('key', key);
+  console.log('value', coords[key]);
+}
 
 console.log(coords.x); // 10
 console.log(coords.y); // 20
@@ -114,6 +119,8 @@ const romain = new Contact('Romain');
 console.log(typeof romain); // object
 console.log(romain._prenom); // 'Romain' (normalement privée)
 console.log(romain.hello()); // 'Bonjour je m'appelle Romain'
+console.log(romain.hasOwnProperty('_prenom')); // true
+console.log(romain.hasOwnProperty('hello')); // false
 
 const eric = new Contact('Eric');
 console.log(eric.hello()); // 'Bonjour je m'appelle Eric'

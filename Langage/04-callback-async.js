@@ -22,8 +22,8 @@ console.log('Fin');
 // |
 // |
 // |
-// |          idle  cl1sA cl1sB  idle  cl1s2
-// |se clFin ...... =>    =>    ...... =>
+// |                idle  cl1sA cl1sB  idle  cl1s2
+// |st st st clFin ...... =>    =>    ...... =>
 // +--------------------------------------> temps
 //                  1s    1s001        1s
 // file d'attente timer :
