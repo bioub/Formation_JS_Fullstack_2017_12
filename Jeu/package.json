@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "chalk": "^2.3.0",
+    "random": "file:../Random"
+  },
+  "main": "main.js",
+  "scripts": {
+    "start": "node ."
+  }
+}

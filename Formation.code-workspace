@@ -8,6 +8,21 @@
 		},
 		{
 			"path": "ModuleCommonJS"
+		},
+		{
+			"path": "NodeFS"
+		},
+		{
+			"path": "BuildWebpack"
+		},
+		{
+			"path": "NodeWeb"
+		},
+		{
+			"path": "AddressBookMERN"
+		},
+		{
+			"path": "Random"
 		}
 	],
 	"settings": {}
