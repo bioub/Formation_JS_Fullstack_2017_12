@@ -40,4 +40,4 @@ class Horloge extends Component {
   }
 }
 
-export default Horloge;
+export { Horloge };

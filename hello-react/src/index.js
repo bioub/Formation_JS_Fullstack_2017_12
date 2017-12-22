@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Horloge from './Horloge';
+import { App } from './App';
 
-ReactDOM.render(<Horloge format="HH:mm:ss" delay={1000} />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));

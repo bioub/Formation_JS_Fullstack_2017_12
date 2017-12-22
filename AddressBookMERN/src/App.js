@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Contact from './Contact';
+import Menu from './Menu';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        Hello
-      </div>
+      <BrowserRouter>
+        <div>
+          <Menu />
+          <div className="container-fluid mt-3">
+            <Route path="/contacts" component={Contact} />
+          </div>
+        </div>
+      </BrowserRouter>
     );
   }
 }
