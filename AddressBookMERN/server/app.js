@@ -13,4 +13,7 @@ app.use('/api/contacts', contactRouter);
 app.use('/api', notFound);
 app.use('/api', errorHandler);
 
+// TODO middleware pour les routes du front
+// sendFile('index.html')
+
 module.exports = app;

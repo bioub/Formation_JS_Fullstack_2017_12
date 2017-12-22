@@ -12,7 +12,7 @@ router.post('/',
   ctrl.create,
 );
 
-router.get('/:id', ctrl.delete);
+router.get('/:id', ctrl.show);
 
 router.delete('/:id', ctrl.delete);
 

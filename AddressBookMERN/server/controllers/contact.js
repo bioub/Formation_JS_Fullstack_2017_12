@@ -10,20 +10,45 @@ exports.list = async (req, res, next) => {
   }
 };
 
-exports.create = (req, res, next) => {
-  req.body // Contact.create
-  next(new Error('create not implemented'));
+exports.create = async (req, res, next) => {
+  try {
+    const ctc = await Contact.create(req.body);
+    res.statusCode = 201;
+    res.json(ctc);
+  }
+  catch (err) {
+    next(err);
+  }
 };
 
-exports.show = (req, res, next) => {
-  const id = req.params.id;
+exports.show = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const ctc = await Contact.findById(id);
 
-  next(new Error('show not implemented'));
+    if (!ctc) {
+      return next();
+    }
+
+    res.json(ctc);
+  }
+  catch (err) {
+    next(err);
+  }
 };
 
+exports.delete = async (req, res, next) => {
+  try {
+    const id = req.params.id;
+    const ctc = await Contact.findByIdAndRemove(id);
 
-exports.delete = (req, res, next) => {
-  const id = req.params.id;
+    if (!ctc) {
+      return next();
+    }
 
-  next(new Error('delete not implemented'));
+    res.json(ctc);
+  }
+  catch (err) {
+    next(err);
+  }
 };
